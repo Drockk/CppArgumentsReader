@@ -5,5 +5,8 @@ add_library(CppArgumentsReader)
 target_sources(CppArgumentsReader
         PUBLIC
         FILE_SET cxx_modules TYPE CXX_MODULES
-        FILES CppArgumentsReader.cppm
+        FILES
+            ArgumentsReader.cppm
+            ArgumentsReaderExceptions.cppm
+            CppArgumentsReader.cppm
 )
