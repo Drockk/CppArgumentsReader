@@ -1,5 +1,7 @@
+// Copyright (c) 2024. Bartosz Zielonka
+
 //
-// Created by batzi on 03.02.2024.
+// Created by Bartosz Zielonka on 03.02.2024.
 //
 #include <stdexcept>
 

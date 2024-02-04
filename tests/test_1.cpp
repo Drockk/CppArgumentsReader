@@ -1,6 +1,5 @@
-//
-// Created by batzi on 03.02.2024.
-//
+// Copyright (c) 2024. Bartosz Zielonka
+
 #include <catch2/catch_test_macros.hpp>
 
 import CppArgumentsReader;
@@ -16,16 +15,16 @@ TEST_CASE("Not valid arguments pointer", "[Basic]") {
 
     REQUIRE_THROWS_AS(argument_reader.read(2, nullptr), car::ArgumentsReaderExceptions);
 }
-
 /*
-TEST_CASE("Single argument", "[Basic-String]") {
-    char* argument = "--text=test";
+TEST_CASE("Single argument", "[Basic]") {
+    auto* argument = "--text=test";
     const char* arguments[1] = { argument };
 
     car::ArgumentsReader argument_reader;
-    argument_reader.read(1, arguments);
-    auto list = argument_reader.get_Arguments_list();
+    argument_reader.read(2, arguments);
+    const auto list = argument_reader.get_parameters_list();
+    CHECK(!list.empty());
     CHECK(list[0] == "text");
-    CHECK(argument_reader.get("text") == "test");
+    // CHECK(argument_reader.get("text") == "test");
 }
 */

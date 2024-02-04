@@ -1,6 +1,13 @@
+// Copyright (c) 2024. Bartosz Zielonka
+
 //
-// Created by batzi on 03.02.2024.
+// Created by Bartosz Zielonka on 03.02.2024.
 //
+
+#include <string>
+#include <vector>
+#include <iostream>
+
 export module CppArgumentsReader:ArgumentsReader;
 import :ArgumentsReaderExceptions;
 
@@ -15,6 +22,15 @@ namespace car {
             if (p_arguments == nullptr) {
                 throw ArgumentsReaderExceptions("Arguments pointer is not valid");
             }
+
+            std::cout << p_arguments;
         }
+
+        [[nodiscard]] const std::vector<std::string>& get_parameters_list() const {
+            return m_parameters_list;
+        }
+
+    private:
+        std::vector<std::string> m_parameters_list;
     };
 }
