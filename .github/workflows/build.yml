@@ -28,6 +28,9 @@ jobs:
       with:
         version: 2.0.17
         
+    - name: Configure Conan
+      run: conan profile detect --force
+        
     - name: Pull dependencies
       run: conan install . --output-folder=build --build=missing
 
